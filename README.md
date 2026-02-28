@@ -1,7 +1,11 @@
 # Python Expert Agent for OpenCode
 
-[![npm version](https://badge.fury.io/js/python-expert-agent.svg)](https://www.npmjs.com/package/python-expert-agent)
+[![npm version](https://img.shields.io/npm/v/python-expert-agent.svg)](https://www.npmjs.com/package/python-expert-agent)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![npm downloads](https://img.shields.io/npm/dm/python-expert-agent.svg)](https://www.npmjs.com/package/python-expert-agent)
+[![experimental](https://img.shields.io/badge/status-experimental-orange)](https://github.com/amrahman90/python-expert-agent)
+
+> **Warning:** This package is experimental. It works great — built for locally Project basis for now at the moment. You have been warned. _(Probably fine though.)_
 
 **A comprehensive Python agent pack for [OpenCode](https://opencode.ai) with 10 skills, 4 subagents, and production-ready FastAPI patterns.**
 
@@ -24,7 +28,7 @@ npm install -g python-expert-agent
 # Install to current project
 python-expert-agent init
 
-# Install globally (for all projects)
+# Install globally (for all projects, experimental)
 python-expert-agent init --global
 ```
 
