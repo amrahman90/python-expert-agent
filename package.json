@@ -4,7 +4,7 @@
   "description": "Python Expert Agent pack for OpenCode - 10 skills, 4 subagents, production-ready FastAPI patterns",
   "type": "module",
   "bin": {
-    "python-expert-agent": "./bin/python-expert-agent.js"
+    "python-expert-agent": "bin/python-expert-agent.js"
   },
   "files": [
     "bin",
