@@ -1,6 +1,6 @@
 {
   "name": "python-expert-agent",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Python Expert Agent pack for OpenCode - 10 skills, 4 subagents, production-ready FastAPI patterns",
   "type": "module",
   "bin": {
@@ -9,6 +9,7 @@
   "files": [
     "bin",
     "src",
+    ".opencode/",
     ".opencode/agent",
     ".opencode/subagents",
     ".opencode/skills",
