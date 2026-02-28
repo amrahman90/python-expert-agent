@@ -116,11 +116,17 @@ export async function init(projectPath, useGlobal, force) {
     await cp(opencodeSource, opencodeTarget, {
       recursive: true,
       filter: (src) => {
+        // Get path relative to .opencode directory to avoid false positives
+        // when the package itself is inside a node_modules folder
+        const relativePath = src.slice(opencodeSource.length);
+        
+        // Normalize path separators for cross-platform compatibility
+        const normalizedPath = relativePath.replace(/\\/g, '/');
+        
         return !excludedPatterns.some(
           (pattern) =>
-            src.endsWith(pattern) ||
-            src.includes(`/${pattern}/`) ||
-            src.includes(`\\${pattern}\\`)
+            normalizedPath === '/' + pattern ||
+            normalizedPath.startsWith('/' + pattern + '/')
         );
       },
     });

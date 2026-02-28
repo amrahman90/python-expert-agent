@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.0.3] - 2026-02-28
+## [0.0.4] - 2026-02-28
 
 ### Bugfix
+- **Critical fix**: Fixed filter logic that excluded ALL files when package installed via npm
+  - Root cause: Filter checked for `node_modules` anywhere in path, but npm installs packages inside `node_modules/`
+  - Solution: Use relative path from `.opencode` directory to only exclude internal `node_modules`
 - Fixed `.opencode/` directory not being copied during `init` command
 - Added file count verification before and after copy
 - Added source directory logging for debugging
@@ -18,6 +21,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Better error messages with stack traces
 - Verification that files were actually copied
 - Debug logging for troubleshooting installation issues
+
+## [0.0.3] - 2026-02-28
+
+### Changed
+- Version bump for npm republish
 
 ## [0.0.2] - 2026-02-28
 
